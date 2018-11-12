@@ -161,6 +161,7 @@ namespace Mirror.Weaver
             }
             parameters.AssemblyResolver = assemblyResolver;
             parameters.SymbolReaderProvider = GetSymbolReaderProvider(assemblyPath);
+            parameters.ReadSymbols = false;
             return parameters;
         }
 

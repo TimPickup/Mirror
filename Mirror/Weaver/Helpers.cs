@@ -170,12 +170,12 @@ namespace Mirror.Weaver
             var writeParams = new WriterParameters();
             if (readParams.SymbolReaderProvider is PdbReaderProvider)
             {
-                //Log("Will export symbols of pdb format");
+                Console.WriteLine("Will export symbols of pdb format");
                 writeParams.SymbolWriterProvider = new PdbWriterProvider();
             }
             else if (readParams.SymbolReaderProvider is MdbReaderProvider)
             {
-                //Log("Will export symbols of mdb format");
+                Console.WriteLine("Will export symbols of mdb format");
                 writeParams.SymbolWriterProvider = new MdbWriterProvider();
             }
             return writeParams;
